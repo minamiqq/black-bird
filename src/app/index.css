@@ -1,0 +1,139 @@
+:root {
+  /* ─────────────────────────────
+     SURFACES — Фоны
+     ───────────────────────────── */
+  --color-surface-base: #0a0a0f; /* Body / App background */
+  --color-surface-card: #14141c; /* Cards / Panels */
+  --color-surface-elevated: #1f1f2a; /* Raised surfaces */
+  --color-border-default: #2e2e3d; /* Borders / Dividers */
+
+  /* ─────────────────────────────
+     BRAND — Основной акцент
+     ───────────────────────────── */
+  --color-brand-bright: #ff456e; /* Charts / KPI */
+  --color-brand-primary: #e81845; /* Buttons / Active states */
+  --color-brand-deep: #b30030; /* Gradient end */
+  --color-brand-focus: #660018; /* Focus rings */
+
+  /* ─────────────────────────────
+     ACCENT — Глаза / Soft accent
+     ───────────────────────────── */
+  --color-accent-bright: #ff6b85; /* Delta chips / Soft */
+  --color-accent-primary: #c81845; /* Eye accent */
+
+  /* ─────────────────────────────
+     NEUTRALS — Серебро
+     ───────────────────────────── */
+  --color-neutral: #b8b8c2; /* Silver / Neutral */
+  --color-neutral-muted: #6f6f7a; /* Offline / Disabled */
+
+  /* ─────────────────────────────
+     TEXT — Типографика
+     ───────────────────────────── */
+  --color-text-inverse: #ffffff; /* Headings / Pure white */
+  --color-text-primary: #f2f2f5; /* Primary text */
+  --color-text-secondary: #9e9ea8; /* Secondary text */
+
+  /* ─────────────────────────────
+     STATUS — Danger / Tail
+     ───────────────────────────── */
+  --color-status-danger: #6b0820; /* Alerts / Overspend */
+  --color-status-danger-deep: #380410; /* Deep danger / Gradient */
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 16px/145% var(--sans);
+  color-scheme: light dark;
+  color: var(--color-text-primary);
+  background: var(--color-surface-base);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --code-bg: #1f2028;
+    --accent: #c084fc;
+    --accent-bg: rgba(192, 132, 252, 0.15);
+    --accent-border: rgba(192, 132, 252, 0.5);
+    --social-bg: rgba(47, 48, 58, 0.5);
+    --shadow:
+      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
+  }
+
+  #social .button-icon {
+    filter: invert(1) brightness(2);
+  }
+} */
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

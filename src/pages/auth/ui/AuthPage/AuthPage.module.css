@@ -1,0 +1,10 @@
+.authForm {
+  width: 450px;
+  border-radius: 28px;
+  border-color: var(--color-border-default);
+  background-color: var(--color-surface-card);
+}
+
+.submitButton {
+  background-color: var(--color-brand-primary);
+}
